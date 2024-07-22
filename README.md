@@ -7,7 +7,7 @@ React Project for SoftUni React Course 2024
 - [x] Add server in server folder
 - [x] Add base vite react project in client folder
 - [x] Clean up client
-- [] create components folder
+- [x] create components folder
 - [] separate html into components
 
 ## 2. React Router
