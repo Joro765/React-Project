@@ -6,7 +6,7 @@ React Project for SoftUni React Course 2024
 - [x] Initialize git repo
 - [x] Add server in server folder
 - [x] Add base vite react project in client folder
-- [] Clean up client
+- [x] Clean up client
 - [] create components folder
 - [] separate html into components
 
