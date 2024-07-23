@@ -14,6 +14,7 @@ html,
 body {
     height: 100%;
     background-color: rgb(248, 238, 225);
+    color: rgb(38 38 38);
     font-family: 'Merriweather', serif;
 }
 
@@ -29,7 +30,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -37,22 +38,35 @@ body {
 
 .site-header {
     min-width: 100%;
+    position: relative;
+    color: inherit;
+    background-color: rgb(38 38 38);
+    min-height: 80px;
+    color: rgb(248, 238, 225);
+}
+
+.site-header-home {
+    min-width: 100%;
     background-image: url("..//images/banner-small2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
     background-position: center;
     position: relative;
+    color: rgb(248, 238, 225);
 }
 
 
 .site-footer {
     min-width: 100%;
     flex: 0;
+    padding: 0.4em;
     margin-top: 40px;
     text-align: center;
     font-size: 1rem;
     letter-spacing: 0.1rem;
+    background-color: rgb(38 38 38);
+    color: rgb(248, 238, 225);
 }
 
 
@@ -72,11 +86,27 @@ html {
     align-items: center;
     padding: 1em 0;
     gap: 0.5em;
+    color: inherit;
+    font-weight: bold;
+}
+
+.site-header-home nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    gap: 0.5em;
     color: rgb(248, 238, 225);
     font-weight: bold;
 }
 
 .site-header nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-header-home nav a {
     text-decoration: none;
     color: inherit;
 }
@@ -87,6 +117,15 @@ nav .logo {
 }
 
 .site-header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 0.7em;
+}
+
+.site-header-home nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -114,14 +153,20 @@ nav .logo {
 
     .site-header nav {
         flex-direction: row;
+        padding: 1em;
     }
 
-    .site-header nav {
+    .site-header-home nav {
+        flex-direction: row;
         padding: 1em;
     }
 
     .banner {
         visibility: visible;
+    }
+
+    #main-content {
+        max-width: 80%;
     }
 }
 
@@ -135,12 +180,16 @@ nav .logo {
         gap: 1em;
     }
 
+    .site-header-home nav ul {
+        gap: 1em;
+    }
+
 
     .site-footer {
         font-size: 1.2rem;
     }
 
-    .site-header {
+    .site-header-home {
         background-image: url("..//images/banner.jpg");
         height: 700px;
     }
@@ -160,6 +209,10 @@ nav .logo {
     .site-header nav ul {
         gap: 1em;
     }
+
+    .site-header-home nav ul {
+        gap: 1em;
+    }
 }
 
 
@@ -169,7 +222,7 @@ nav .logo {
         font-size: 24px;
     }
 
-    .site-header {
+    .site-header-home {
         background-image: url("..//images/banner.jpg");
         height: 1000px;
     }
