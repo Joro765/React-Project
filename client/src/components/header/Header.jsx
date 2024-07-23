@@ -18,6 +18,10 @@ export default function Header() {
                     </li>
                 </ul>
             </nav>
+            <div className="banner">
+                <h1>TASTY PASSION</h1>
+                <h4>Learn how to make your favorite dishes.</h4>
+            </div>
         </header>
     )
 }

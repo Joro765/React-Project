@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+h1 {
+    line-height: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 html,
 body {
     height: 100%;
     background-color: rgb(248, 238, 225);
+    font-family: 'Merriweather', serif;
 }
 
 
@@ -30,6 +37,12 @@ body {
 
 .site-header {
     min-width: 100%;
+    background-image: url("..//images/banner-small2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+    position: relative;
 }
 
 
@@ -37,4 +50,127 @@ body {
     min-width: 100%;
     flex: 0;
     margin-top: 40px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+
+
+/* DEMO - DELETE LATER */
+
+
+html {
+    font-size: 16px;
+}
+
+
+.site-header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    gap: 0.5em;
+    color: rgb(248, 238, 225);
+    font-weight: bold;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav .logo {
+    font-size: 1.6em;
+}
+
+.site-header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 0.7em;
+}
+
+
+
+.banner {
+    visibility: hidden;
+    color: rgb(248, 238, 225);
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+
+/* Tablets in landscape mode */
+@media (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    .site-header nav {
+        flex-direction: row;
+    }
+
+    .site-header nav {
+        padding: 1em;
+    }
+
+    .banner {
+        visibility: visible;
+    }
+}
+
+/* Small desktops */
+@media (min-width: 992px) {
+    body {
+        font-size: 22px;
+    }
+
+    .site-header nav ul {
+        gap: 1em;
+    }
+
+
+    .site-footer {
+        font-size: 1.2rem;
+    }
+
+    .site-header {
+        background-image: url("..//images/banner.jpg");
+        height: 700px;
+    }
+
+    .banner {
+        left: 10%;
+    }
+
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+    body {
+        font-size: 24px;
+    }
+
+    .site-header nav ul {
+        gap: 1em;
+    }
+}
+
+
+/* 4K */
+@media (min-width: 1900px) {
+    body {
+        font-size: 24px;
+    }
+
+    .site-header {
+        background-image: url("..//images/banner.jpg");
+        height: 1000px;
+    }
 }
