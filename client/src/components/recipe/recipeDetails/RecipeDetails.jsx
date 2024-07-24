@@ -16,7 +16,7 @@ export default function RecipeDetails() {
         }
 
         getRecipe();
-    })
+    }, []);
 
     return (
 
