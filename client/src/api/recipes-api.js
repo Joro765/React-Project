@@ -10,3 +10,9 @@ export async function getLatest() {
     const response = await fetch(`${BASE_URL}?offset=0&pageSize=6`);
     return response.json();
 }
+
+
+export async function getRecipeById(recipeId) {
+    const response = await fetch(`${BASE_URL}/${recipeId}`);
+    return response.json();
+}

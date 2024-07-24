@@ -1349,7 +1349,7 @@
                 difficulty: "easy",
                 time: "40 mins",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1074495_11-fe11955.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/1703272/pexels-photo-1703272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "1 tbsp Ingredient 1",
                     "2 cups Ingredient 2",
@@ -1371,7 +1371,7 @@
                 difficulty: "easy",
                 time: "20 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/carbonara-with-chicken-7666d11.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "500 g  Ingredient 1",
                     "3 tbsp Ingredient 2",
@@ -1392,7 +1392,7 @@
                 difficulty: "easy",
                 time: "10 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1201727_11-4026b8d.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1415,7 +1415,7 @@
                 difficulty: "easy",
                 time: "25 mins",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1273456_8-a5710e5.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/821403/pexels-photo-821403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1438,7 +1438,7 @@
                 difficulty: "easy",
                 time: "20 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mackerel-club-sandwich-a839d74.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1461,7 +1461,7 @@
                 difficulty: "easy",
                 time: "20 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/03/French-fries-b9e3e0c.jpg?quality=90&webp=true&resize=600,545",
+                img: "https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",

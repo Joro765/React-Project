@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import RecipeDetails from "./components/recipe/recipeDetails/RecipeDetails";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <main id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

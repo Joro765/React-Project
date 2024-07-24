@@ -2,7 +2,7 @@ import styles from "../home/Home.module.css";
 
 import { useState, useEffect } from "react";
 import * as recipeApi from "../../api/recipes-api";
-import RecipeCard from "../recipe/RecipeCard";
+import RecipeCard from "../recipe/recipeCard/RecipeCard";
 
 
 export default function Home() {
