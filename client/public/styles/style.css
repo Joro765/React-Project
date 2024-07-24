@@ -154,16 +154,36 @@ html {
     font-weight: bold;
 }
 
+
+
+
+
+
+
 .site-header nav a {
     text-decoration: none;
     color: inherit;
+    padding: 0.4em 0.8em;
+    border-radius: 0.3em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.site-header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .site-header-home nav a {
     text-decoration: none;
     color: inherit;
+    padding: 0.4em 0.8em;
+    border-radius: 0.3em;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.site-header-home nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
 nav .logo {
     font-size: 1.6em;
@@ -171,21 +191,30 @@ nav .logo {
 
 .site-header nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 0.7em;
+    gap: 1em;
+    margin-top: 1em;
 }
 
 .site-header-home nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 0.7em;
+    gap: 1em;
+    margin-top: 1em;
 }
+
+
+
+
+
+
+
 
 
 
@@ -197,6 +226,48 @@ nav .logo {
     left: 5%;
 }
 
+
+
+@media (min-width: 380px) {
+    .site-header nav ul {
+        flex-direction: row;
+        gap: 0.3em;
+    }
+
+    .site-header-home nav ul {
+        flex-direction: row;
+        gap: 0.3em;
+    }
+}
+
+
+
+@media (min-width: 450px) {
+    .site-header nav ul {
+        gap: 0.7em;
+    }
+
+    .site-header-home nav ul {
+        gap: 0.7em;
+    }
+
+    .site-header nav a {
+        padding: 0.5em 1em;
+    }
+
+    .site-header-home nav a {
+        padding: 0.5em 1em;
+    }
+
+    .site-header nav ul {
+        gap: 0.5em;
+    }
+
+    .site-header-home nav ul {
+        gap: 0.5em;
+    }
+
+}
 
 
 @media (min-width: 768px) {
@@ -213,6 +284,7 @@ nav .logo {
         flex-direction: row;
         padding: 1em;
     }
+
 
     .banner {
         visibility: visible;
