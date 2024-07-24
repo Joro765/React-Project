@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
 
+import ScrollToTop from "./components/common/ScrollToTop";
+
+
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
@@ -15,6 +18,7 @@ function App() {
       <Header />
 
       <main id="main-content">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
