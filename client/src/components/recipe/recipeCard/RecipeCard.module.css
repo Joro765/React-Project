@@ -69,6 +69,21 @@ a {
     cursor: pointer;
 }
 
+
+.recipeCard h3 {
+    transition: color 0.3s ease;
+
+}
+
+
+.recipeCard:hover h3 {
+    color: #bc2a07;
+
+}
+
+
+
+
 @media (min-width: 992px) {}
 
 
