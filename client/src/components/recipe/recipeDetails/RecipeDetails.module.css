@@ -66,6 +66,68 @@
 
 
 
+.instructionsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+    padding: 0 1em;
+}
+
+
+
+
+.instructionsWrapper .ingredients ul {
+    margin-top: 1em;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style-type: none;
+    /* Remove default bullets */
+}
+
+.instructionsWrapper .ingredients ul li {
+    position: relative;
+    padding-left: 1.5em;
+    /* Space for the custom bullet */
+}
+
+.instructionsWrapper .ingredients ul li::before {
+    content: "";
+    /* No content needed, we will use a square shape */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+    /* Adjust size as needed */
+    height: 1em;
+    /* Adjust size as needed */
+    background-color: #bc2a07;
+    /* Color of the square bullet */
+    border-radius: 0.2em;
+}
+
+
+
+
+.instructionsWrapper .steps ul {
+    margin-top: 1em;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style-type: decimal;
+}
+
+
+
+
+.instructionsWrapper .steps ul li::marker {
+    color: #bc2a07;
+    font-weight: bold;
+}
 
 
 

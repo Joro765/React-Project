@@ -35,7 +35,31 @@ export default function RecipeDetails() {
                     <p>Category <i>{recipe.category}</i></p>
                     <p>Total Time <i>{recipe.time}</i></p>
                     <p>Difficulty <i>{recipe.difficulty}</i></p>
-                    <p>Servings <i>${recipe.servings}</i></p>
+                    <p>Servings <i>{recipe.servings}</i></p>
+                </div>
+            </div>
+            <div className={styles.instructionsWrapper}>
+                <div className={styles.ingredients}>
+                    <h3>Ingredients</h3>
+                    <p>First of all, check if you have all the necessary ingredients for this recipe. Pay attention to the quantities!</p>
+                    <ul>
+                        <li>400g cherry truss tomatoes</li>
+                        <li>400g cherry truss tomatoes</li>
+                        <li>400g cherry truss tomatoes</li>
+                        <li>400g cherry truss tomatoes</li>
+                        <li>400g cherry truss tomatoes</li>
+                        <li>400g cherry truss tomatoes</li>
+                    </ul>
+                </div>
+                <div className={styles.steps}>
+                    <h3>The Steps</h3>
+                    <p>Next, follow the steps to finalize your dish and finally be able to enjoy it!</p>
+                    <ul>
+                        <li>Cut remaining tomatoes into small portions. Add tomatoes, olives and capers to tray. Bake for a further 15 minutes or until fish is cooked through. Sprinkle with extra herbs. Serve with lemon wedges.</li>
+                        <li>Cut remaining tomatoes into small portions. Add tomatoes, olives and capers to tray. Bake for a further 15 minutes or until fish is cooked through. Sprinkle with extra herbs. Serve with lemon wedges.</li>
+                        <li>Cut remaining tomatoes into small portions. Add tomatoes, olives and capers to tray. Bake for a further 15 minutes or until fish is cooked through. Sprinkle with extra herbs. Serve with lemon wedges.</li>
+                        <li>Cut remaining tomatoes into small portions. Add tomatoes, olives and capers to tray. Bake for a further 15 minutes or until fish is cooked through. Sprinkle with extra herbs. Serve with lemon wedges.</li>
+                    </ul>
                 </div>
             </div>
         </div>
