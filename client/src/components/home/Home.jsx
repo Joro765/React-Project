@@ -12,6 +12,8 @@ export default function Home() {
 
 
     useEffect(() => {
+        setIsLoading(true);
+
         async function loadRecipes() {
             const result = await recipeApi.getLatest();
             setRecipes(result);
