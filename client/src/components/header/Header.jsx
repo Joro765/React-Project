@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import AuthContext from '../../contexts/authContext';
 
 
 export default function Header() {
     const location = useLocation();
+
+    const { isAuthenticated } = useContext(AuthContext);
 
 
     return (
@@ -13,10 +17,22 @@ export default function Header() {
                 <header className="site-header-home">
                     <nav>
                         <p className="logo"><Link to="/">RecipeBook.</Link></p>
-                        <ul>
+                        {isAuthenticated && (<ul>
                             <li>
-                                <Link to="/">Home</Link>
+                                <Link to="/recipes">Recipes</Link>
                             </li>
+                            <li>
+                                <Link to="/register">Create</Link>
+                            </li>
+                            <li>
+                                <Link to="/login">Profile</Link>
+                            </li>
+                            <li>
+                                <Link to="/login">Logout</Link>
+                            </li>
+                        </ul>)}
+
+                        {!isAuthenticated && (<ul>
                             <li>
                                 <Link to="/recipes">Recipes</Link>
                             </li>
@@ -26,7 +42,8 @@ export default function Header() {
                             <li>
                                 <Link to="/login">Login</Link>
                             </li>
-                        </ul>
+                        </ul>)}
+
                     </nav>
                     <div className="banner">
                         <h1>TASTY PASSION</h1>
@@ -37,10 +54,22 @@ export default function Header() {
                 <header className="site-header">
                     <nav>
                         <p className="logo"><Link to="/">RecipeBook.</Link></p>
-                        <ul>
+                        {isAuthenticated && (<ul>
                             <li>
-                                <Link to="/">Home</Link>
+                                <Link to="/recipes">Recipes</Link>
                             </li>
+                            <li>
+                                <Link to="/register">Create</Link>
+                            </li>
+                            <li>
+                                <Link to="/login">Profile</Link>
+                            </li>
+                            <li>
+                                <Link to="/login">Logout</Link>
+                            </li>
+                        </ul>)}
+
+                        {!isAuthenticated && (<ul>
                             <li>
                                 <Link to="/recipes">Recipes</Link>
                             </li>
@@ -50,7 +79,7 @@ export default function Header() {
                             <li>
                                 <Link to="/login">Login</Link>
                             </li>
-                        </ul>
+                        </ul>)}
                     </nav>
                 </header>
 

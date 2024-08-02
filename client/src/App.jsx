@@ -28,11 +28,15 @@ function App() {
     }
   }
 
-
+  const values = {
+    loginSubmitHandler,
+    email: auth.email,
+    isAuthenticated: !!auth.email
+  }
 
 
   return (
-    <AuthContext.Provider value={{ loginSubmitHandler }}>
+    <AuthContext.Provider value={values}>
       <div id="page-container">
         <Header />
 
