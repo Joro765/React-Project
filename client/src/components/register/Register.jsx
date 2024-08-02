@@ -1,44 +1,34 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import useForm from "../../hooks/useForm";
 
-import styles from "../register/Register.module.css"
+import styles from "../register/Register.module.css";
+import { useContext } from "react";
+import AuthContext from "../../contexts/authContext";
 
 
 export default function Register() {
-    const [user, setUser] = useState({
-        email: "",
-        password: "",
-        rePassword: "",
-    })
 
+    const { registerSubmitHandler } = useContext(AuthContext);
 
-    function formSubmitHandler(e) {
-        e.preventDefault();
-        console.log("Form Submitted!");
-        console.log(user);
-    }
-
-    function changeHandler(e) {
-        setUser(oldUser => ({ ...oldUser, [e.target.name]: e.target.value }));
-    }
+    const { values, onChange, onSubmit } = useForm({ email: "", password: "", rePassword: "" }, registerSubmitHandler);
 
 
 
     return (
         <div className={styles.formWrapper}>
-            <form onSubmit={formSubmitHandler} className={styles.registerForm}>
+            <form onSubmit={onSubmit} className={styles.registerForm}>
                 <h2>Register</h2>
                 <div className={styles.inputs}>
                     <label htmlFor="email">Email</label>
-                    <input type="text" name="email" id="email" value={user.email} onChange={changeHandler} placeholder="example@domain.com" />
+                    <input type="text" name="email" id="email" value={values.email} onChange={onChange} placeholder="example@domain.com" />
                 </div>
                 <div className={styles.inputs}>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" value={user.password} onChange={changeHandler} placeholder="******" />
+                    <input type="password" name="password" id="password" value={values.password} onChange={onChange} placeholder="******" />
                 </div>
                 <div className={styles.inputs}>
                     <label htmlFor="rePassword">Confirm Password</label>
-                    <input type="password" name="rePassword" id="rePassword" value={user.rePassword} onChange={changeHandler} placeholder="******" />
+                    <input type="password" name="rePassword" id="rePassword" value={values.rePassword} onChange={onChange} placeholder="******" />
                 </div>
                 <div className={styles.buttons}>
                     <button type="submit">Register</button>

@@ -10,7 +10,7 @@ import Home from "./components/home/Home";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import RecipeDetails from "./components/recipe/recipeDetails/RecipeDetails";
-import { login } from "./api/auth-api";
+import { login, register } from "./api/auth-api";
 
 
 function App() {
@@ -30,9 +30,23 @@ function App() {
 
   const values = {
     loginSubmitHandler,
+    registerSubmitHandler,
     email: auth.email,
     isAuthenticated: !!auth.email
   }
+
+
+  async function registerSubmitHandler(values) {
+    try {
+      const userData = await register(values.email, values.password);
+      setAuth(userData);
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+
 
 
   return (

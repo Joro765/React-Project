@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm";
 
-import styles from "../login/Login.module.css"
+import styles from "../login/Login.module.css";
 import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
 
