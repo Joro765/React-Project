@@ -16,8 +16,8 @@ export default function Login() {
 
     return (
         <div className={styles.formWrapper}>
+            <h2 className={styles.formTitle}>Login</h2>
             <form onSubmit={onSubmit} className={styles.loginForm}>
-                <h2>Login</h2>
                 <div className={styles.inputs}>
                     <label htmlFor="email">Email</label>
                     <input type="text" name="email" id="email" value={values.email} onChange={onChange} placeholder="example@domain.com" />
@@ -28,7 +28,7 @@ export default function Login() {
                 </div>
                 <div className={styles.buttons}>
                     <button type="submit">Login</button>
-                    <p>Don't have an account? <Link to="/register">Register</Link></p>
+                    <p>Don't have an account? <Link className={styles.linkButton} to="/register">Register</Link></p>
                 </div>
             </form>
         </div>

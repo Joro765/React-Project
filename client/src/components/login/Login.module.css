@@ -1,8 +1,5 @@
 .formWrapper {
-    background-image: url("../../../public/images/forms/login2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -15,10 +12,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    overflow: hidden;
+    z-index: 1;
 }
 
+.formWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../public/images/forms/login2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    opacity: 0.8;
+    z-index: -1;
+}
 
+.formTitle {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
 
 .loginForm {
     display: flex;
@@ -30,6 +50,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    z-index: 2;
 }
 
 .loginForm .inputs {
@@ -58,6 +79,31 @@
     gap: 0.5em;
 }
 
+
+
+.linkButton {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.linkButton::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.2s ease-in-out;
+}
+
+
+.linkButton:hover::after {
+    width: 100%;
+}
+
 .loginForm .buttons button {
     padding: 0.5em 2em;
     font-size: inherit;
@@ -69,23 +115,17 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
-
 .loginForm .buttons button:hover {
     background-color: rgba(0, 0, 0, 0.7);
     transform: scale(1.05);
     cursor: pointer;
 }
 
-
-
-
-
 @media (min-width: 768px) {
     .formWrapper {
         padding: 30px;
     }
 }
-
 
 @media (min-width: 992px) {
     .formWrapper {

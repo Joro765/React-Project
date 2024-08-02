@@ -16,8 +16,8 @@ export default function Register() {
 
     return (
         <div className={styles.formWrapper}>
+            <h2 className={styles.formTitle}>Register</h2>
             <form onSubmit={onSubmit} className={styles.registerForm}>
-                <h2>Register</h2>
                 <div className={styles.inputs}>
                     <label htmlFor="email">Email</label>
                     <input type="text" name="email" id="email" value={values.email} onChange={onChange} placeholder="example@domain.com" />
@@ -32,7 +32,7 @@ export default function Register() {
                 </div>
                 <div className={styles.buttons}>
                     <button type="submit">Register</button>
-                    <p>Already have an account? <Link to="/login">Login</Link></p>
+                    <p>Already have an account? <Link className={styles.linkButton} to="/login">Login</Link></p>
                 </div>
             </form>
         </div>
