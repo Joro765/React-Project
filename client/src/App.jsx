@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import Logout from "./components/logout/Logout";
 import RecipeDetails from "./components/recipe/recipeDetails/RecipeDetails";
 import { login, register } from "./api/auth-api";
 
@@ -28,12 +29,6 @@ function App() {
     }
   }
 
-  const values = {
-    loginSubmitHandler,
-    registerSubmitHandler,
-    email: auth.email,
-    isAuthenticated: !!auth.email
-  }
 
 
   async function registerSubmitHandler(values) {
@@ -44,6 +39,22 @@ function App() {
     } catch (error) {
       console.log(error.message);
     }
+  }
+
+
+
+  function logoutHandler() {
+    setAuth({});
+  }
+
+
+  const values = {
+    loginSubmitHandler,
+    registerSubmitHandler,
+    logoutHandler,
+    email: auth.email,
+    isAuthenticated: !!auth.accessToken,
+    accessToken: auth.accessToken
   }
 
 
@@ -61,6 +72,7 @@ function App() {
             <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/logout" element={<Logout />} />
           </Routes>
         </main>
 

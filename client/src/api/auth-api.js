@@ -16,6 +16,8 @@ export async function login(email, password) {
 }
 
 
+
+
 export async function register(email, password) {
 
     const requestOptions = {
@@ -28,4 +30,23 @@ export async function register(email, password) {
     const result = await response.json();
 
     return result;
+}
+
+
+
+
+export async function logout(accessToken) {
+
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'X-Authorization': `${accessToken}` },
+    };
+
+    const response = await fetch(`${BASE_URL}/logout`, requestOptions);
+
+    if (response.status === 204) {
+        return {};
+    }
+
+    return null;
 }

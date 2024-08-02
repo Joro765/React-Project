@@ -28,7 +28,7 @@ export default function Header() {
                                 <Link to="/login">Profile</Link>
                             </li>
                             <li>
-                                <Link to="/login">Logout</Link>
+                                <Link to="/logout">Logout</Link>
                             </li>
                         </ul>)}
 
@@ -65,7 +65,7 @@ export default function Header() {
                                 <Link to="/login">Profile</Link>
                             </li>
                             <li>
-                                <Link to="/login">Logout</Link>
+                                <Link to="/logout">Logout</Link>
                             </li>
                         </ul>)}
 
