@@ -1,0 +1,82 @@
+.recipesSection {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+.banner {
+    text-align: center;
+    height: 500px;
+    background-image: url("../../../../public/images/banner-all-recipes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.banner h1 {
+    background-color: rgba(50, 49, 49, 0.6);
+    color: rgb(248, 238, 225);
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+
+.slogan {
+    padding: 4em;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+
+
+
+.recipesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .recipesSection {
+        margin-top: 2em;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    .recipesList {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .slogan {
+        padding: 5em;
+    }
+}
+
+
+
+@media (min-width: 1900px) {
+    .recipesList {
+        gap: 5em;
+    }
+
+
+}

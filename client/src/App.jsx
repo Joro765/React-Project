@@ -11,6 +11,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Logout from "./components/logout/Logout";
 import RecipeDetails from "./components/recipe/recipeDetails/RecipeDetails";
+import Recipes from "./components/recipe/allRecipes/Recipes";
 import { login, register } from "./api/auth-api";
 
 
@@ -69,6 +70,7 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
