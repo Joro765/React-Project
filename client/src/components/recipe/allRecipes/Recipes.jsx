@@ -11,6 +11,7 @@ import RecipeCard from "../../recipe/recipeCard/RecipeCard";
 export default function Recipes() {
 
     const [recipes, setRecipes] = useState([]);
+    const [offset, setOffset] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
 
 
@@ -18,13 +19,24 @@ export default function Recipes() {
         setIsLoading(true);
 
         async function loadRecipes() {
-            const result = await recipeApi.getLatest();
+            const result = await recipeApi.getMoreRecipes(offset);
             setRecipes(result);
+            setOffset(prevOffset => prevOffset + 6);
             setIsLoading(false);
         }
 
         loadRecipes();
     }, []);
+
+
+
+    async function loadMore() {
+        setIsLoading(true);
+        const result = await recipeApi.getMoreRecipes(offset);
+        setRecipes((prevRecipes) => [...prevRecipes, ...result]);
+        setOffset(prevOffset => prevOffset + 6);
+        setIsLoading(false);
+    }
 
 
 
@@ -48,6 +60,9 @@ export default function Recipes() {
                             {recipes.map((recipe) => <RecipeCard key={recipe._id} {...recipe} />)}
                         </div>)
                 }
+            </div>
+            <div className={styles.buttons}>
+                <button onClick={loadMore}>Show more</button>
             </div>
         </div>
 

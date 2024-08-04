@@ -45,8 +45,37 @@
     align-items: center;
     justify-content: center;
     gap: 4em;
+    margin-bottom: 3em;
 }
 
+
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.buttons button {
+    padding: 0.5em 2em;
+    font-size: inherit;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 
 

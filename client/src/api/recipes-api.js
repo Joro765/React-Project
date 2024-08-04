@@ -6,6 +6,12 @@ export async function getAll() {
 }
 
 
+export async function getMoreRecipes(offset) {
+    const response = await fetch(`${BASE_URL}?offset=${offset}&pageSize=6`);
+    return response.json();
+}
+
+
 export async function getLatest() {
     const response = await fetch(`${BASE_URL}?offset=0&pageSize=6`);
     return response.json();
