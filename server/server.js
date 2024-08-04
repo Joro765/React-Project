@@ -1484,7 +1484,7 @@
                 difficulty: "medium",
                 time: "50 mins",
                 servings: "3",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/vegan-bolognese-b4f9b85.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/5807022/pexels-photo-5807022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1507,7 +1507,7 @@
                 difficulty: "easy",
                 time: "15 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/epic-summer-salad-000aded.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/27400771/pexels-photo-27400771/free-photo-of-organic-salad-with-strawberries-blueberries-herbs-and-edible-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1530,7 +1530,7 @@
                 difficulty: "easy",
                 time: "25 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1074500_11-ee0d41a.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/7318799/pexels-photo-7318799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1553,7 +1553,7 @@
                 difficulty: "medium",
                 time: "1 hr 20 mins",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/beef-curry-711a4c1.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/2313686/pexels-photo-2313686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1576,7 +1576,7 @@
                 difficulty: "medium",
                 time: "50 mins",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/01/Next-level-fish-and-chips-f0ad0c4.jpg?quality=90&webp=true&resize=600,545",
+                img: "https://images.pexels.com/photos/4967719/pexels-photo-4967719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1599,7 +1599,7 @@
                 difficulty: "easy",
                 time: "55 mins",
                 servings: "10-12",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/carrot-cake-f1b3d0c.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/3026809/pexels-photo-3026809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1622,7 +1622,7 @@
                 difficulty: "easy",
                 time: "25 mins",
                 servings: "5-6",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cheese_scones-7333023.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/6660291/pexels-photo-6660291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1645,7 +1645,7 @@
                 difficulty: "medium",
                 time: "1 hr",
                 servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2024/02/BeefEnchiladas-68c9381.jpg?quality=90&webp=true&resize=600,545",
+                img: "https://brandsitesplatform-res.cloudinary.com/image/fetch/w_1540,c_scale,q_auto:eco,f_auto,fl_lossy,dpr_1.0,e_sharpen:85/https://assets.brandplatform.generalmills.com%2F-%2Fmedia%2Fproject%2Fgmi%2Foldelpaso%2Foldelpaso-us%2Frecipes%2Fsv1m0wquruexfsx_l87eag_gmi_hi_res_jpeg.jpeg%3F%201540w",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1668,7 +1668,7 @@
                 difficulty: "easy",
                 time: "30 mins",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/15-minute-chicken-halloumi-burgers-ef95d1d.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
