@@ -72,7 +72,7 @@ export default function Recipes() {
                 {hasMore ? (
                     <button onClick={loadMore} disabled={loading}>Load More</button>
                 ) : (
-                    <p>No more items to load</p>
+                    <p>No more recipes to load</p>
                 )}
             </div>
         </div>
