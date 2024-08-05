@@ -29,7 +29,6 @@ export default function CreateRecipe() {
     async function submitRecipeHandler(recipeData) {
         recipeData.steps = stringConvert(recipeData.steps);
         recipeData.ingredients = stringConvert(recipeData.ingredients);
-        console.log(recipeData.difficulty);
 
         try {
             const result = await submitRecipe(recipeData);
