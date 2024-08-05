@@ -1691,7 +1691,7 @@
                 difficulty: "easy",
                 time: "20 mins",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2022/05/Caprese-salad-8f218a3.png?quality=90&webp=true&resize=600,545",
+                img: "https://images.pexels.com/photos/25315523/pexels-photo-25315523/free-photo-of-chicken-meat-with-a-salad.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1714,7 +1714,7 @@
                 difficulty: "hard",
                 time: "2 hr",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2022/06/Piri-piri-pork-ribs-4a07da9.jpg?quality=90&webp=true&resize=600,545",
+                img: "https://images.pexels.com/photos/14303579/pexels-photo-14303579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1737,7 +1737,7 @@
                 difficulty: "easy",
                 time: "30 mins",
                 servings: "4-6",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2022/09/Classic-Waffles-0ae28b2.jpg?quality=90&webp=true&resize=600,545",
+                img: "https://images.pexels.com/photos/4437921/pexels-photo-4437921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1760,7 +1760,7 @@
                 difficulty: "hard",
                 time: "30 mins",
                 servings: "4-6",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/07/Calamari-and-aioli-564ae54.jpg?quality=90&webp=true&resize=600,545",
+                img: "https://images.pexels.com/photos/4181933/pexels-photo-4181933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1783,7 +1783,7 @@
                 difficulty: "medium",
                 time: "40 mins",
                 servings: "4",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/pork-medallions-afaf8bd.jpg?quality=90&webp=true&resize=440,400",
+                img: "https://images.pexels.com/photos/2098116/pexels-photo-2098116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
@@ -1800,13 +1800,13 @@
             },
             "21": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-                name: "Stuffed mushrooms",
+                name: "Cheesy Pizza",
                 category: "side",
-                description: "Serve these easy stuffed mushrooms with melted cheese, bacon lardons and breadcrumbs alongside a simple salad and crusty bread for a quick, fuss-free dinner.",
-                difficulty: "easy",
-                time: "30 mins",
-                servings: "2",
-                img: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/stuffed-mushrooms-fd50faf.jpg?quality=90&webp=true&resize=440,400",
+                description: "Even a novice cook can master the art of perfect pizza with our step-by-step guide. This homemade pizza recipe features a simple pizza dough and toppings.",
+                difficulty: "medium",
+                time: "40 mins",
+                servings: "4",
+                img: "https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                 ingredients: [
                     "4 cups Ingredient 1",
                     "1 tbsp Ingredient 2",
