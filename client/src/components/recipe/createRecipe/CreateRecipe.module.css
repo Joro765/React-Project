@@ -18,7 +18,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.loginForm {
+.createRecipeForm {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -29,7 +29,7 @@
     height: 100%;
 }
 
-.loginForm .inputs {
+.createRecipeForm .inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
 
 
 
-.loginForm .selectors {
+.createRecipeForm .selectors {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +49,7 @@
 
 
 
-.loginForm .selectors .inputs {
+.createRecipeForm .selectors .inputs {
     text-align: center;
     gap: 0.5em;
     justify-content: center;
@@ -58,7 +58,7 @@
 
 
 
-.loginForm .inputs input,
+.createRecipeForm .inputs input,
 select,
 textarea {
     width: 100%;
@@ -72,7 +72,7 @@ textarea {
 
 
 
-.loginForm .buttons {
+.createRecipeForm .buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,30 +82,7 @@ textarea {
 
 
 
-.linkButton {
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-}
-
-
-.linkButton::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.2s ease-in-out;
-}
-
-
-.linkButton:hover::after {
-    width: 100%;
-}
-
-.loginForm .buttons button {
+.createRecipeForm .buttons button {
     padding: 0.5em 2em;
     font-size: inherit;
     box-sizing: border-box;
@@ -116,7 +93,7 @@ textarea {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.loginForm .buttons button:hover {
+.createRecipeForm .buttons button:hover {
     background-color: rgba(0, 0, 0, 0.7);
     transform: scale(1.05);
     cursor: pointer;
@@ -127,7 +104,7 @@ textarea {
         padding: 30px;
     }
 
-    .loginForm .selectors {
+    .createRecipeForm .selectors {
         flex-direction: row;
         max-width: 600px;
         gap: 3em;

@@ -5,7 +5,7 @@ export default function CreateRecipe() {
     return (
         <div className={styles.formWrapper}>
             <h2 className={styles.formTitle}>Create Recipe</h2>
-            <form className={styles.loginForm}>
+            <form className={styles.createRecipeForm}>
 
                 <div className={styles.inputs}>
                     <label htmlFor="email">Title</label>
