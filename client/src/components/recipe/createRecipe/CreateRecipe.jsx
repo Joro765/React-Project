@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import stringConvert from "../../../utils/utils";
+import { stringConvert } from "../../../utils/utils";
 import useForm from "../../../hooks/useForm";
 
 import styles from "../../recipe/createRecipe/CreateRecipe.module.css";

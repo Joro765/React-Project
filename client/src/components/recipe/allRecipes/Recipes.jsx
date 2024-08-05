@@ -3,7 +3,7 @@ import styles from "../allRecipes/Recipes.module.css";
 import Spinner from "../../common/spinner/Spinner";
 
 import { useState, useEffect } from "react";
-import * as recipeApi from "../../../api/recipes-api";
+import { getMoreRecipes } from "../../../api/recipes-api";
 import RecipeCard from "../../recipe/recipeCard/RecipeCard";
 
 
@@ -12,34 +12,41 @@ export default function Recipes() {
 
     const [recipes, setRecipes] = useState([]);
     const [offset, setOffset] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
-
+    const [hasMore, setHasMore] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setIsLoading(true);
-
-        async function loadRecipes() {
-            const result = await recipeApi.getMoreRecipes(offset);
-            setRecipes(result);
-            setOffset(prevOffset => prevOffset + 6);
-            setIsLoading(false);
-        }
-
-        loadRecipes();
+        fetchItems(offset);
     }, []);
 
 
 
-    async function loadMore() {
-        setIsLoading(true);
-        const result = await recipeApi.getMoreRecipes(offset);
-        setRecipes((prevRecipes) => [...prevRecipes, ...result]);
-        setOffset(prevOffset => prevOffset + 6);
-        setIsLoading(false);
-    }
+
+    const fetchItems = async (offset) => {
+        setLoading(true);
+        try {
+            const data = await getMoreRecipes(offset);
+
+            if (data.length === 0) {
+                setHasMore(false);
+            } else {
+                setRecipes((prevItems) => [...prevItems, ...data]);
+                setOffset(offset + 6);
+            }
+        } catch (error) {
+            console.error('Error fetching items:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
 
 
+    const loadMore = () => {
+        if (hasMore && !loading) {
+            fetchItems(offset);
+        }
+    };
 
 
 
@@ -53,7 +60,7 @@ export default function Recipes() {
                 <p>Satisfy every craving with our diverse collection of recipes where every dish tells a delicious story.</p>
             </div>
             <div className={styles.recipesList}>
-                {isLoading
+                {loading
                     ? <Spinner />
                     : (
                         <div className={styles.recipesList}>
@@ -62,11 +69,15 @@ export default function Recipes() {
                 }
             </div>
             <div className={styles.buttons}>
-                <button onClick={loadMore}>Show more</button>
+                {hasMore ? (
+                    <button onClick={loadMore} disabled={loading}>Load More</button>
+                ) : (
+                    <p>No more items to load</p>
+                )}
             </div>
         </div>
 
     )
+
+
 }
-
-

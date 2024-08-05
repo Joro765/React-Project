@@ -1,6 +1,6 @@
 import styles from "../recipeCard/RecipeCard.module.css";
 
-import truncateDescription from "../../../utils/utils";
+import { truncateDescription } from "../../../utils/utils";
 
 import { Link } from "react-router-dom";
 
@@ -11,16 +11,6 @@ export default function RecipeCard({
     name,
     description
 }) {
-
-    const truncateDescription = (desc, maxLength) => {
-        if (desc.length <= maxLength) {
-            return desc;
-        }
-        return desc.slice(0, maxLength) + '...';
-    };
-
-
-
 
 
 
