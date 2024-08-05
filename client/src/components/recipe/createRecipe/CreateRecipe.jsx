@@ -15,9 +15,9 @@ export default function CreateRecipe() {
             name: "",
             img: "",
             time: "",
-            difficulty: "",
-            servings: "",
-            category: "",
+            difficulty: "easy",
+            servings: "1",
+            category: "soup",
             description: "",
             ingredients: [],
             steps: []
