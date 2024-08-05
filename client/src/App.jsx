@@ -17,7 +17,11 @@ import { login, register } from "./api/auth-api";
 
 function App() {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState({});
+  const [auth, setAuth] = useState(() => {
+    localStorage.removeItem("accessToken");
+
+    return {};
+  });
 
 
   async function loginSubmitHandler(values) {
