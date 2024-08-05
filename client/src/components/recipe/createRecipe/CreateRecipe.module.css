@@ -1,0 +1,143 @@
+.formWrapper {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+
+
+.formTitle {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.loginForm .inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.loginForm .selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+}
+
+
+
+.loginForm .selectors .inputs {
+    text-align: center;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+
+.loginForm .inputs input,
+select,
+textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+.loginForm .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+
+
+.linkButton {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.linkButton::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.2s ease-in-out;
+}
+
+
+.linkButton:hover::after {
+    width: 100%;
+}
+
+.loginForm .buttons button {
+    padding: 0.5em 2em;
+    font-size: inherit;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.loginForm .buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .formWrapper {
+        padding: 30px;
+    }
+
+    .loginForm .selectors {
+        flex-direction: row;
+        width: 600px;
+        gap: 3em;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .formWrapper {
+        padding: 40px;
+    }
+}
