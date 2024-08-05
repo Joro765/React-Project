@@ -22,10 +22,10 @@ export default function Header() {
                                 <Link to="/recipes">Recipes</Link>
                             </li>
                             <li>
-                                <Link to="/register">Create</Link>
+                                <Link to="/recipes/create">Create</Link>
                             </li>
                             <li>
-                                <Link to="/login">Profile</Link>
+                                <Link to="/profile">Profile</Link>
                             </li>
                             <li>
                                 <Link to="/logout">Logout</Link>
@@ -59,10 +59,10 @@ export default function Header() {
                                 <Link to="/recipes">Recipes</Link>
                             </li>
                             <li>
-                                <Link to="/register">Create</Link>
+                                <Link to="/recipes/create">Create</Link>
                             </li>
                             <li>
-                                <Link to="/login">Profile</Link>
+                                <Link to="/profile">Profile</Link>
                             </li>
                             <li>
                                 <Link to="/logout">Logout</Link>

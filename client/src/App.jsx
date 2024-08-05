@@ -13,6 +13,8 @@ import Logout from "./components/logout/Logout";
 import RecipeDetails from "./components/recipe/recipeDetails/RecipeDetails";
 import Recipes from "./components/recipe/allRecipes/Recipes";
 import { login, register } from "./api/auth-api";
+import CreateRecipe from "./components/recipe/createRecipe/CreateRecipe";
+import Profile from "./components/profile/Profile";
 
 
 function App() {
@@ -79,6 +81,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+            <Route path="/recipes/create" element={<CreateRecipe />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
