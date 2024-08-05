@@ -24,6 +24,7 @@ function App() {
     try {
       const userData = await login(values.email, values.password);
       setAuth(userData);
+      localStorage.setItem("accessToken", userData.accessToken);
       navigate("/");
     } catch (error) {
       console.log(error.message);
@@ -36,6 +37,7 @@ function App() {
     try {
       const userData = await register(values.email, values.password);
       setAuth(userData);
+      localStorage.setItem("accessToken", userData.accessToken);
       navigate("/");
     } catch (error) {
       console.log(error.message);
@@ -46,6 +48,7 @@ function App() {
 
   function logoutHandler() {
     setAuth({});
+    localStorage.removeItem("accessToken");
   }
 
 
