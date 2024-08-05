@@ -1,34 +1,73 @@
+import { Link, useNavigate } from "react-router-dom";
+import stringConvert from "../../../utils/utils";
+import useForm from "../../../hooks/useForm";
+
 import styles from "../../recipe/createRecipe/CreateRecipe.module.css";
+import { submitRecipe } from "../../../api/recipes-api";
+
 
 
 export default function CreateRecipe() {
+    const navigate = useNavigate();
+
+    const { values, onChange, onSubmit } = useForm(
+        {
+            name: "",
+            img: "",
+            time: "",
+            difficulty: "",
+            servings: "",
+            category: "",
+            description: "",
+            ingredients: [],
+            steps: []
+        }, submitRecipeHandler);
+
+
+
+
+    async function submitRecipeHandler(recipeData) {
+        recipeData.steps = stringConvert(recipeData.steps);
+        recipeData.ingredients = stringConvert(recipeData.ingredients);
+        console.log(recipeData.difficulty);
+
+        try {
+            const result = await submitRecipe(recipeData);
+            navigate(`/recipes/${result._id}`);
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
+
+
     return (
         <div className={styles.formWrapper}>
             <h2 className={styles.formTitle}>Create Recipe</h2>
-            <form className={styles.createRecipeForm}>
+            <form onSubmit={onSubmit} className={styles.createRecipeForm}>
 
                 <div className={styles.inputs}>
-                    <label htmlFor="email">Title</label>
-                    <input type="text" name="email" id="email" placeholder="Delicious recipe" />
+                    <label htmlFor="name">Title</label>
+                    <input type="text" name="name" id="name" placeholder="Delicious recipe" values={values.name} onChange={onChange} />
                 </div>
 
                 <div className={styles.inputs}>
-                    <label htmlFor="password">Picture</label>
-                    <input type="text" name="password" id="password" placeholder="Image url" />
+                    <label htmlFor="img">Picture</label>
+                    <input type="text" name="img" id="img" placeholder="Image url" values={values.img} onChange={onChange} />
                 </div>
 
 
                 <div className={styles.inputs}>
-                    <label for="time">Cooking Time</label>
-                    <input type="text" id="time" name="time" placeholder="enter minutes..." />
+                    <label htmlFor="time">Cooking Time</label>
+                    <input type="text" id="time" name="time" placeholder="enter minutes..." values={values.time} onChange={onChange} />
                 </div>
 
 
 
                 <div className={styles.selectors}>
                     <div className={styles.inputs}>
-                        <label for="difficulty">Difficulty</label>
-                        <select name="difficulty" id="difficulty">
+                        <label htmlFor="difficulty">Difficulty</label>
+                        <select name="difficulty" id="difficulty" values={values.difficulty} onChange={onChange}>
                             <option value="easy">easy</option>
                             <option value="medium">medium</option>
                             <option value="hard">hard</option>
@@ -37,8 +76,8 @@ export default function CreateRecipe() {
 
 
                     <div className={styles.inputs}>
-                        <label for="servings">Servings</label>
-                        <select name="servings" id="servings">
+                        <label htmlFor="servings">Servings</label>
+                        <select name="servings" id="servings" values={values.servings} onChange={onChange}>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -50,10 +89,10 @@ export default function CreateRecipe() {
 
 
                     <div className={styles.inputs}>
-                        <label for="category">Category</label>
-                        <select name="category" id="category">
+                        <label htmlFor="category">Category</label>
+                        <select name="category" id="category" values={values.category} onChange={onChange}>
                             <option value="soup">soup</option>
-                            <option value="soup">salad</option>
+                            <option value="salad">salad</option>
                             <option value="side">side</option>
                             <option value="dessert">dessert</option>
                             <option value="seafood">seafood</option>
@@ -67,20 +106,20 @@ export default function CreateRecipe() {
 
 
                 <div className={styles.inputs}>
-                    <label for="description">Recipe Description</label>
-                    <textarea name="description" id="description"
-                        maxlength="200" placeholder="enter a brief description..."></textarea>
+                    <label htmlFor="description">Recipe Description</label>
+                    <textarea name="description" id="description" values={values.description} onChange={onChange}
+                        placeholder="enter a brief description..."></textarea>
                 </div>
 
                 <div className={styles.inputs}>
-                    <label for="ingredients">Igredients</label>
-                    <textarea name="ingredients" id="ingredients"
-                        maxlength="100" placeholder="each ingredient on a new line..."></textarea>
+                    <label htmlFor="ingredients">Ingredients</label>
+                    <textarea name="ingredients" id="ingredients" values={values.ingredients} onChange={onChange}
+                        placeholder="each ingredient on a new line..."></textarea>
                 </div>
 
                 <div className={styles.inputs}>
-                    <label for="steps">Cooking Steps</label>
-                    <textarea name="steps" id="steps" maxlength="100"
+                    <label htmlFor="steps">Cooking Steps</label>
+                    <textarea name="steps" id="steps" values={values.steps} onChange={onChange}
                         placeholder="each step on a new line..."></textarea>
                 </div>
 

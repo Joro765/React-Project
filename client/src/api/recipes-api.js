@@ -22,3 +22,20 @@ export async function getRecipeById(recipeId) {
     const response = await fetch(`${BASE_URL}/${recipeId}`);
     return response.json();
 }
+
+
+export async function submitRecipe(recipe) {
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Authorization': `${localStorage.getItem("accessToken")}`
+        },
+        body: JSON.stringify(recipe)
+    };
+
+    const response = await fetch(`${BASE_URL}`, requestOptions);
+    const result = await response.json();
+
+    return result;
+}
