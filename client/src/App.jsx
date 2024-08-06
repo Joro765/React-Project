@@ -16,6 +16,8 @@ import { login, register } from "./api/auth-api";
 import CreateRecipe from "./components/recipe/createRecipe/CreateRecipe";
 import Profile from "./components/profile/Profile";
 import EditRecipe from "./components/recipe/editRecipe/EditRecipe";
+import UserGuard from "./components/common/routeguards/UserGuard";
+import GuestGuard from "./components/common/routeguards/GuestGuard";
 import Wildcard from "./components/common/wildcard/Wildcard";
 
 
@@ -84,12 +86,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
-            <Route path="/recipes/:recipeId/edit" element={<EditRecipe />} />
-            <Route path="/recipes/create" element={<CreateRecipe />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/logout" element={<Logout />} />
+            <Route path="/recipes/:recipeId/edit" element={<UserGuard><EditRecipe /></UserGuard>} />
+            <Route path="/recipes/create" element={<UserGuard><CreateRecipe /></UserGuard>} />
+            <Route path="/profile" element={<UserGuard><Profile /></UserGuard>} />
+            <Route path="/login" element={<GuestGuard><Login /></GuestGuard>} />
+            <Route path="/register" element={<GuestGuard><Register /></GuestGuard>} />
+            <Route path="/logout" element={<GuestGuard><Logout /></GuestGuard>} />
             <Route path="*" element={<Wildcard />} />
           </Routes>
         </main>
