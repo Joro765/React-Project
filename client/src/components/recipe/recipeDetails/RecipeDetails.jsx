@@ -70,14 +70,14 @@ export default function RecipeDetails() {
                     <h3>Ingredients</h3>
                     <p>First of all, check if you have all the necessary ingredients for this recipe. Pay attention to the quantities!</p>
                     <ul>
-                        {recipe.ingredients?.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}
+                        {recipe.ingredients?.map((ingredient, index) => <li key={index}>{ingredient}</li>)}
                     </ul>
                 </div>
                 <div className={styles.steps}>
                     <h3>The Steps</h3>
                     <p>Next, follow the steps to finalize your dish and finally be able to enjoy it!</p>
                     <ul>
-                        {recipe.steps?.map((step) => <li key={step}>{step}</li>)}
+                        {recipe.steps?.map((step, index) => <li key={index}>{step}</li>)}
                     </ul>
                 </div>
             </div>

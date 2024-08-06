@@ -10,7 +10,7 @@ import { submitRecipe } from "../../../api/recipes-api";
 export default function CreateRecipe() {
     const navigate = useNavigate();
 
-    const { values, onChange, onSubmit, errors, submitError } = useForm(
+    const { values, onChange, onSubmit, errors } = useForm(
         {
             name: "",
             img: "",
