@@ -35,20 +35,15 @@ function App() {
     setAuth(userData);
     localStorage.setItem("accessToken", userData.accessToken);
     navigate("/");
-
   }
 
 
 
   async function registerSubmitHandler(values) {
-    try {
-      const userData = await register(values.email, values.password);
-      setAuth(userData);
-      localStorage.setItem("accessToken", userData.accessToken);
-      navigate("/");
-    } catch (error) {
-      console.log(error.message);
-    }
+    const userData = await register(values.email, values.password);
+    setAuth(userData);
+    localStorage.setItem("accessToken", userData.accessToken);
+    navigate("/");
   }
 
 
