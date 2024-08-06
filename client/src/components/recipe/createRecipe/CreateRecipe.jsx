@@ -29,8 +29,8 @@ export default function CreateRecipe() {
 
         if (!values.name) {
             errors.name = "Title is required";
-        } else if (values.name.length < 3) {
-            errors.name = "Title must be at least 3 characters long";
+        } else if (values.name.length < 5) {
+            errors.name = "Title must be at least 5 characters long";
         }
 
 
@@ -178,21 +178,21 @@ export default function CreateRecipe() {
                 <div className={styles.inputs}>
                     <label htmlFor="description">Recipe Description</label>
                     <textarea name="description" id="description" values={values.description} onChange={onChange}
-                        placeholder="enter a brief description..."></textarea>
+                        placeholder="enter a brief description..." maxLength={400} rows="5"></textarea>
                     {errors.description && <p className={styles.error}>{errors.description}</p>}
                 </div>
 
                 <div className={styles.inputs}>
                     <label htmlFor="ingredients">Ingredients</label>
                     <textarea name="ingredients" id="ingredients" values={values.ingredients} onChange={onChange}
-                        placeholder="each ingredient on a new line..."></textarea>
+                        placeholder="each ingredient on a new line..." maxLength={200} rows="5"></textarea>
                     {errors.ingredients && <p className={styles.error}>{errors.ingredients}</p>}
                 </div>
 
                 <div className={styles.inputs}>
                     <label htmlFor="steps">Cooking Steps</label>
                     <textarea name="steps" id="steps" values={values.steps} onChange={onChange}
-                        placeholder="each step on a new line..."></textarea>
+                        placeholder="each step on a new line..." maxLength={200} rows="5"></textarea>
                     {errors.steps && <p className={styles.error}>{errors.steps}</p>}
                 </div>
 
