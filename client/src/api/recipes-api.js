@@ -18,6 +18,14 @@ export async function getLatest() {
 }
 
 
+
+export async function getUserRecipes(userId) {
+    const response = await fetch(`${BASE_URL}/recipes?where=_ownerId%3D%22${userId}%22`);
+    return response.json();
+}
+
+
+
 export async function getRecipeById(recipeId) {
     const response = await fetch(`${BASE_URL}/${recipeId}`);
     return response.json();
