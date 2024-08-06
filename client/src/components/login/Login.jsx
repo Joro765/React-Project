@@ -41,16 +41,16 @@ export default function Login() {
                 <div className={styles.inputs}>
                     <label htmlFor="email">Email</label>
                     <input type="text" name="email" id="email" value={values.email} onChange={onChange} placeholder="example@domain.com" />
-                    {errors.email && <p className={styles.error}>{errors.email}</p>}
+                    {errors.email && <p className="error">{errors.email}</p>}
                 </div>
                 <div className={styles.inputs}>
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" id="password" value={values.password} onChange={onChange} placeholder="******" />
-                    {errors.password && <p className={styles.error}>{errors.password}</p>}
+                    {errors.password && <p className="error">{errors.password}</p>}
                 </div>
                 <div className={styles.buttons}>
                     <button type="submit">Login</button>
-                    {submitError && <p className={styles.error}>{submitError}</p>}
+                    {submitError && <p className="error">{submitError}</p>}
                     <p>Don't have an account? <Link className={styles.linkButton} to="/register">Register</Link></p>
                 </div>
             </form>

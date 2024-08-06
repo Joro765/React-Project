@@ -24,6 +24,7 @@ export default function useForm(initialValues, submitHandler, validate) {
 
     async function onSubmit(e) {
         e.preventDefault();
+
         const validationErrors = validate(values);
         setErrors(validationErrors);
 
@@ -31,7 +32,6 @@ export default function useForm(initialValues, submitHandler, validate) {
             try {
                 await submitHandler(values);
             } catch (error) {
-                console.log(error);
                 setSubmitError(error);
             }
         }

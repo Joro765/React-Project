@@ -205,20 +205,19 @@ nav .logo {
 }
 
 
-
-
-
-
-
-
-
-
 .banner {
     visibility: hidden;
     color: rgb(248, 238, 225);
     position: absolute;
     top: 40%;
     left: 5%;
+}
+
+
+
+.error {
+    font-style: italic;
+    font-size: 0.5em;
 }
 
 
@@ -288,6 +287,12 @@ nav .logo {
     #main-content {
         max-width: 90%;
     }
+
+    .error {
+        font-style: italic;
+        font-size: 0.8em;
+    }
+
 }
 
 
@@ -318,6 +323,12 @@ nav .logo {
         left: 10%;
     }
 
+    .error {
+        font-style: italic;
+        font-size: 0.8em;
+    }
+
+
 }
 
 
@@ -333,6 +344,12 @@ nav .logo {
     .site-header-home nav ul {
         gap: 1em;
     }
+
+    .error {
+        font-style: italic;
+        font-size: 0.8em;
+    }
+
 }
 
 
@@ -346,4 +363,10 @@ nav .logo {
         background-image: url("..//images/banner.jpg");
         height: 1000px;
     }
+
+    .error {
+        font-style: italic;
+        font-size: 0.8em;
+    }
+
 }
