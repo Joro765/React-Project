@@ -16,6 +16,7 @@ import { login, register } from "./api/auth-api";
 import CreateRecipe from "./components/recipe/createRecipe/CreateRecipe";
 import Profile from "./components/profile/Profile";
 import EditRecipe from "./components/recipe/editRecipe/EditRecipe";
+import Wildcard from "./components/common/wildcard/Wildcard";
 
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="*" element={<Wildcard />} />
           </Routes>
         </main>
 
