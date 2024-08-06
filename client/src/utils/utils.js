@@ -11,3 +11,11 @@ export function truncateDescription(desc, maxLength) {
     }
     return desc.slice(0, maxLength) + '...';
 }
+
+
+
+export function formatArray(arr) {
+    let result = arr.join(",");
+    result = result.replaceAll(",", "\n");
+    return result;
+}

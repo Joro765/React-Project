@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import styles from "../../recipe/editRecipe/EditRecipe.module.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import useForm from "../../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
-import { stringConvert } from "../../../utils/utils";
+import { stringConvert, formatArray } from "../../../utils/utils";
 
 import { getRecipeById, updateRecipe } from "../../../api/recipes-api";
 
@@ -91,15 +91,22 @@ function validate(values) {
 export default function EditRecipe() {
     const navigate = useNavigate();
     const { recipeId } = useParams();
+    const [recipe, setRecipe] = useState(initialValues);
 
     useEffect(() => {
         async function getRecipe() {
             const recipe = await getRecipeById(recipeId);
+            recipe.ingredients = formatArray(recipe.ingredients);
+            recipe.steps = formatArray(recipe.steps);
+            setRecipe(recipe);
             setValues(recipe);
         }
 
         getRecipe();
     }, []);
+
+
+
 
 
     const { values, onChange, onSubmit, setValues, errors } = useForm(initialValues, submitRecipeHandler, validate);
@@ -108,13 +115,13 @@ export default function EditRecipe() {
 
 
     async function submitRecipeHandler(recipeData) {
-        recipeData.steps = stringConvert(recipeData.steps);
-        recipeData.ingredients = stringConvert(recipeData.ingredients);
 
         const isConfirmed = confirm("Are you sure you want to edit this recipe?");
 
         try {
             if (isConfirmed) {
+                recipeData.steps = stringConvert(recipeData.steps);
+                recipeData.ingredients = stringConvert(recipeData.ingredients);
                 const result = await updateRecipe(recipeId, recipeData);
                 navigate(`/recipes/${result._id}`);
             }

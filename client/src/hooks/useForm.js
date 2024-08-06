@@ -25,15 +25,20 @@ export default function useForm(initialValues, submitHandler, validate) {
     async function onSubmit(e) {
         e.preventDefault();
 
-        const validationErrors = validate(values);
-        setErrors(validationErrors);
+        if (validate) {
+            const validationErrors = validate(values);
+            setErrors(validationErrors);
 
-        if (Object.keys(validationErrors).length === 0) {
-            try {
-                await submitHandler(values);
-            } catch (error) {
-                setSubmitError(error);
+
+            if (Object.keys(validationErrors).length === 0) {
+                try {
+                    await submitHandler(values);
+                } catch (error) {
+                    setSubmitError(error);
+                }
             }
+        } else {
+            await submitHandler(values);
         }
 
 
