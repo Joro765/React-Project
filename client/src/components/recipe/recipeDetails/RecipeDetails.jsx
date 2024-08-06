@@ -2,6 +2,7 @@ import styles from "../recipeDetails/RecipeDetails.module.css";
 
 import * as recipeApi from "../../../api/recipes-api";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../../contexts/authContext";
 import { useNavigate, useParams } from "react-router-dom";
@@ -78,10 +79,10 @@ export default function RecipeDetails() {
             </div>
             {isOwner &&
                 <div className={styles.buttons}>
-                    <button>Edit</button>
+                    <Link to={`/recipes/${recipeId}/edit`}><button>Edit</button></Link>
                     <button onClick={deleteRecipeHandler}>Delete</button>
                 </div>
             }
-        </div>
+        </div >
     )
 }

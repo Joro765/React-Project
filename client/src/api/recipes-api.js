@@ -47,11 +47,30 @@ export async function removeRecipe(recipeId) {
         headers: {
             'Content-Type': 'application/json',
             'X-Authorization': `${localStorage.getItem("accessToken")}`
-        },
+        }
     };
 
     const response = await fetch(`${BASE_URL}/${recipeId}`, requestOptions);
     const result = await response.json();
 
     return result;
+}
+
+
+
+export async function updateRecipe(recipeId, data) {
+    const requestOptions = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Authorization': `${localStorage.getItem("accessToken")}`
+        },
+        body: JSON.stringify(data)
+    };
+
+    const response = await fetch(`${BASE_URL}/${recipeId}`, requestOptions);
+    const result = await response.json();
+
+    return result;
+
 }

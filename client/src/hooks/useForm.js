@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function useForm(initialValues, submitHandler) {
     const [values, setValues] = useState(initialValues);
+
 
 
     function onChange(e) {
@@ -25,6 +26,7 @@ export default function useForm(initialValues, submitHandler) {
         values,
         onChange,
         onSubmit,
+        setValues
 
     }
 }
