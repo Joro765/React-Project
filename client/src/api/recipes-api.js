@@ -39,3 +39,19 @@ export async function submitRecipe(recipe) {
 
     return result;
 }
+
+
+export async function removeRecipe(recipeId) {
+    const requestOptions = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Authorization': `${localStorage.getItem("accessToken")}`
+        },
+    };
+
+    const response = await fetch(`${BASE_URL}/${recipeId}`, requestOptions);
+    const result = await response.json();
+
+    return result;
+}

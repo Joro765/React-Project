@@ -4,10 +4,11 @@ import * as recipeApi from "../../../api/recipes-api";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import AuthContext from "../../../contexts/authContext";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function RecipeDetails() {
 
+    const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
 
 
@@ -28,6 +29,18 @@ export default function RecipeDetails() {
 
         getRecipe();
     }, []);
+
+
+    async function deleteRecipeHandler() {
+        try {
+            const result = await recipeApi.removeRecipe(recipeId);
+            navigate("/recipes");
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
+
 
     return (
 
@@ -66,7 +79,7 @@ export default function RecipeDetails() {
             {isOwner &&
                 <div className={styles.buttons}>
                     <button>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={deleteRecipeHandler}>Delete</button>
                 </div>
             }
         </div>
