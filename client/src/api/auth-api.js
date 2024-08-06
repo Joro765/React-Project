@@ -10,9 +10,15 @@ export async function login(email, password) {
     };
 
     const response = await fetch(`${BASE_URL}/login`, requestOptions);
-    const result = await response.json();
 
+
+    if (!response.ok) {
+        throw response.statusText;
+    }
+
+    const result = response.json();
     return result;
+
 }
 
 

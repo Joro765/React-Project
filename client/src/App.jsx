@@ -31,14 +31,11 @@ function App() {
 
 
   async function loginSubmitHandler(values) {
-    try {
-      const userData = await login(values.email, values.password);
-      setAuth(userData);
-      localStorage.setItem("accessToken", userData.accessToken);
-      navigate("/");
-    } catch (error) {
-      console.log(error.message);
-    }
+    const userData = await login(values.email, values.password);
+    setAuth(userData);
+    localStorage.setItem("accessToken", userData.accessToken);
+    navigate("/");
+
   }
 
 
@@ -91,7 +88,7 @@ function App() {
             <Route path="/profile" element={<UserGuard><Profile /></UserGuard>} />
             <Route path="/login" element={<GuestGuard><Login /></GuestGuard>} />
             <Route path="/register" element={<GuestGuard><Register /></GuestGuard>} />
-            <Route path="/logout" element={<GuestGuard><Logout /></GuestGuard>} />
+            <Route path="/logout" element={<Logout />} />
             <Route path="*" element={<Wildcard />} />
           </Routes>
         </main>
