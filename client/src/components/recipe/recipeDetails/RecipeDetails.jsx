@@ -33,9 +33,13 @@ export default function RecipeDetails() {
 
 
     async function deleteRecipeHandler() {
+        const isConfirmed = confirm("Are you sure you want to delete this recipe?");
+
         try {
-            const result = await recipeApi.removeRecipe(recipeId);
-            navigate("/recipes");
+            if (isConfirmed) {
+                const result = await recipeApi.removeRecipe(recipeId);
+                navigate("/recipes");
+            }
         } catch (error) {
             console.log(error.message);
         }

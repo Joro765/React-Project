@@ -8,7 +8,6 @@ import { stringConvert } from "../../../utils/utils";
 import { getRecipeById, updateRecipe } from "../../../api/recipes-api";
 
 
-
 const initialValues = {
     name: "",
     img: "",
@@ -21,10 +20,10 @@ const initialValues = {
     steps: []
 }
 
+
 export default function EditRecipe() {
     const navigate = useNavigate();
     const { recipeId } = useParams();
-    const [recipe, setRecipe] = useState(initialValues);
 
     useEffect(() => {
         async function getRecipe() {
@@ -43,9 +42,13 @@ export default function EditRecipe() {
         recipeData.steps = stringConvert(recipeData.steps);
         recipeData.ingredients = stringConvert(recipeData.ingredients);
 
+        const isConfirmed = confirm("Are you sure you want to edit this recipe?");
+
         try {
-            const result = await updateRecipe(recipeId, recipeData);
-            navigate(`/recipes/${result._id}`);
+            if (isConfirmed) {
+                const result = await updateRecipe(recipeId, recipeData);
+                navigate(`/recipes/${result._id}`);
+            }
         } catch (error) {
             console.log(error.message);
         }
