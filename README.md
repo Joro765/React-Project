@@ -1,9 +1,9 @@
 # React-Project
 Recipe Book Project
 
-To start the application first install the dependencies and then start the server with command "node server.js" executed in the server directory.
+To start the application first install the dependencies in "client" folder. Start the server with command "node server.js" executed in the server directory. And start the app with command "npm run dev" in client folder.
 
-RecipeBook is a a culinary recipe sharing site. Site visitors can browse numerous delicious recipes and upload their own recipes after they register. The Application consists of a home page, recipe catalogue page, details page, add/edit recipe page, register, login and profile pages.
+RecipeBook is a a culinary recipe sharing site. Site visitors can browse numerous delicious recipes and upload their own recipes after they register. The Application consists of a home page, recipe catalogue page, details page, add/edit recipe page, register, login and profile pages. Responsive design.
 
 Home Page - welcoming banner and a section that holds 6 of the best recipes. User can click on any recipe to open a details page of the current recipe. -- accessible for guest and users.
 
