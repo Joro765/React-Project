@@ -37,7 +37,7 @@ function App() {
             <Route path="/profile" element={<UserGuard><Profile /></UserGuard>} />
             <Route path="/login" element={<GuestGuard><Login /></GuestGuard>} />
             <Route path="/register" element={<GuestGuard><Register /></GuestGuard>} />
-            <Route path="/logout" element={<Logout />} />
+            <Route path="/logout" element={<UserGuard><Logout /></UserGuard>} />
             <Route path="*" element={<Wildcard />} />
           </Routes>
         </main>
