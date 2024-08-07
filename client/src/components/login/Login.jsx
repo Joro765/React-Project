@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm";
+import { login } from "../../api/auth-api";
 
 import styles from "../login/Login.module.css";
-import { useContext } from "react";
-import AuthContext from "../../contexts/authContext";
+import React, { useContext } from 'react';
+import { AuthContext } from '../../contexts/authContext';
 
 
 
 
 export default function Login() {
 
-    const { loginSubmitHandler } = useContext(AuthContext);
-
+    const { setAuth } = useContext(AuthContext);
     const { values, onChange, onSubmit, errors, submitError } = useForm({ email: "", password: "" }, loginSubmitHandler, validate);
 
 
@@ -32,6 +32,17 @@ export default function Login() {
 
         return errors;
     };
+
+
+
+    async function loginSubmitHandler(values) {
+        const userData = await login(values.email, values.password);
+        setAuth(userData);
+        navigate("/");
+    }
+
+
+
 
 
     return (

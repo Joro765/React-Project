@@ -1,7 +1,5 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import AuthContext from "./contexts/authContext";
-
+import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from './contexts/authContext';
 
 import ScrollToTop from "./components/common/ScrollToTop";
 import Header from "./components/header/Header";
@@ -12,7 +10,6 @@ import Register from "./components/register/Register";
 import Logout from "./components/logout/Logout";
 import RecipeDetails from "./components/recipe/recipeDetails/RecipeDetails";
 import Recipes from "./components/recipe/allRecipes/Recipes";
-import { login, register } from "./api/auth-api";
 import CreateRecipe from "./components/recipe/createRecipe/CreateRecipe";
 import Profile from "./components/profile/Profile";
 import EditRecipe from "./components/recipe/editRecipe/EditRecipe";
@@ -22,53 +19,10 @@ import Wildcard from "./components/common/wildcard/Wildcard";
 
 
 function App() {
-  const navigate = useNavigate();
-  const [auth, setAuth] = useState(() => {
-    localStorage.removeItem("accessToken");
-
-    return {};
-  });
-
-
-  async function loginSubmitHandler(values) {
-    const userData = await login(values.email, values.password);
-    setAuth(userData);
-    localStorage.setItem("accessToken", userData.accessToken);
-    navigate("/");
-  }
-
-
-
-  async function registerSubmitHandler(values) {
-    const userData = await register(values.email, values.password);
-    setAuth(userData);
-    localStorage.setItem("accessToken", userData.accessToken);
-    navigate("/");
-  }
-
-
-
-  function logoutHandler() {
-    setAuth({});
-    localStorage.removeItem("accessToken");
-  }
-
-
-  const values = {
-    loginSubmitHandler,
-    registerSubmitHandler,
-    logoutHandler,
-    email: auth.email,
-    userId: auth._id,
-    isAuthenticated: !!auth.accessToken,
-    accessToken: auth.accessToken
-  }
-
-
 
 
   return (
-    <AuthContext.Provider value={values}>
+    <AuthProvider>
       <div id="page-container">
         <Header />
 
@@ -90,7 +44,7 @@ function App() {
 
         <Footer />
       </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   )
 }
 

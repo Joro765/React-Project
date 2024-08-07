@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm";
+import { register } from "../../api/auth-api";
 
 import styles from "../register/Register.module.css";
-import { useContext } from "react";
-import AuthContext from "../../contexts/authContext";
+import React, { useContext } from 'react';
+import { AuthContext } from '../../contexts/authContext';
 
 
 export default function Register() {
 
-    const { registerSubmitHandler } = useContext(AuthContext);
-
+    const { setAuth } = useContext(AuthContext);
     const { values, onChange, onSubmit, errors, submitError } = useForm({ email: "", password: "", rePassword: "" }, registerSubmitHandler, validate);
 
 
@@ -34,6 +34,15 @@ export default function Register() {
 
         return errors;
     };
+
+
+
+    async function registerSubmitHandler(values) {
+        const userData = await register(values.email, values.password);
+        setAuth(userData);
+        navigate("/");
+    }
+
 
 
 
