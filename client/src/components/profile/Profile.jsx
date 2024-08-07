@@ -11,13 +11,13 @@ import styles from './Profile.module.css';
 
 export default function Profile() {
     const [recipes, setRecipes] = useState([]);
-    const { userId, email } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
 
     useEffect(() => {
 
         async function loadRecipes() {
-            const result = await getUserRecipes(userId);
+            const result = await getUserRecipes(user._id);
             setRecipes(result);
         }
 
@@ -33,7 +33,7 @@ export default function Profile() {
                     <div className={styles.imageWrapper}>
                         <img src="images/user.png" alt="" />
                     </div>
-                    <h3>Welcome <span className={styles.userEmail}>{email}</span></h3>
+                    <h3>Welcome <span className={styles.userEmail}>{user.email}</span></h3>
                 </div>
                 <h4>Manage your recipes</h4>
                 <div className={styles.recipesList}>

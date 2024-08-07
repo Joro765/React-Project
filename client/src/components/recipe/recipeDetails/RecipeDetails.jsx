@@ -10,7 +10,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export default function RecipeDetails() {
 
     const navigate = useNavigate();
-    const { userId } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
 
     const [recipe, setRecipe] = useState({});
@@ -23,7 +23,7 @@ export default function RecipeDetails() {
             const recipe = await recipeApi.getRecipeById(recipeId);
             setRecipe(recipe);
 
-            if (recipe._ownerId === userId) {
+            if (recipe._ownerId === user._id) {
                 setIsOwner(true);
             }
         }
