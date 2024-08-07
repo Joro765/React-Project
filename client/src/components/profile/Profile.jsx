@@ -11,7 +11,7 @@ import styles from './Profile.module.css';
 
 export default function Profile() {
     const [recipes, setRecipes] = useState([]);
-    const { userId } = useContext(AuthContext);
+    const { userId, email } = useContext(AuthContext);
 
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default function Profile() {
                     <div className={styles.imageWrapper}>
                         <img src="images/user.png" alt="" />
                     </div>
-                    <h3>Welcome <span className={styles.userEmail}>jorogeorgiev765@gmail.com</span></h3>
+                    <h3>Welcome <span className={styles.userEmail}>{email}</span></h3>
                 </div>
                 <h4>Manage your recipes</h4>
                 <div className={styles.recipesList}>
