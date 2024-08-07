@@ -35,7 +35,7 @@ export default function Profile() {
                     </div>
                     <h3>Welcome <span className={styles.userEmail}>{user.email}</span></h3>
                 </div>
-                <h4>Manage your recipes</h4>
+                <h4 className={styles.profileHeading}>Manage your recipes</h4>
                 <div className={styles.recipesList}>
                     {recipes.length > 0 ? (
                         <div className={styles.recipesList}>

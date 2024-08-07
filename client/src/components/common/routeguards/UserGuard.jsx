@@ -9,6 +9,8 @@ export default function UserGuard({ children }) {
 
     if (!isAuthenticated) {
         return <Navigate to="/" />
+    } else {
+
     }
 
     return (
