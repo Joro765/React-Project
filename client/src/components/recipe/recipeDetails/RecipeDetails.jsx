@@ -23,7 +23,7 @@ export default function RecipeDetails() {
             const recipe = await recipeApi.getRecipeById(recipeId);
             setRecipe(recipe);
 
-            if (recipe._ownerId === user._id) {
+            if (recipe._ownerId === user?._id) {
                 setIsOwner(true);
             }
         }

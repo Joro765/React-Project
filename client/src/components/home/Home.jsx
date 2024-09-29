@@ -16,6 +16,7 @@ export default function Home() {
 
         async function loadRecipes() {
             const result = await recipeApi.getLatest();
+
             setRecipes(result);
             setIsLoading(false);
         }

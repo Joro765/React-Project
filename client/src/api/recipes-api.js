@@ -1,5 +1,6 @@
 const BASE_URL = "http://localhost:3030/data/recipes";
 
+
 export async function getAll() {
     const response = await fetch(BASE_URL);
     return response.json();
@@ -23,7 +24,6 @@ export async function getUserRecipes(userId) {
     const response = await fetch(`${BASE_URL}/recipes?where=_ownerId%3D%22${userId}%22`);
     return response.json();
 }
-
 
 
 export async function getRecipeById(recipeId) {
